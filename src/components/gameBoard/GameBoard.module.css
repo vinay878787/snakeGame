@@ -9,9 +9,9 @@
 .board {
   max-width:100%;
   display: grid;
-  grid-template-columns: repeat(20, 2.5vw); /* Adjust column count as needed */
-  grid-template-rows: repeat(10, 2.5vw); /* Adjust row count as needed */
-  gap: 1px; /* Gap between cells */
+  grid-template-columns: repeat(20, 2.5vw); 
+  grid-template-rows: repeat(10, 2.5vw); 
+  gap: 1px; 
   max-height: 50vh;
 }
 
@@ -19,23 +19,23 @@
 .cell {
   width: 2.5vw;
   height: 2.5vw;
-  background-color: #fff; /* Default cell color */
-  border: 1px solid #000; /* Border around cells */
+  background-color: #fff; 
+  border: 1px solid #000; 
 }
 .cell:hover{
   background-color: green;
 }
 
 .snake {
-  background-color: red; /* Snake color */
+  background-color: red; 
 }
 
 .player {
-  background-color: green; /* Player color */
+  background-color: green; 
 }
 
 .diamond {
-  background-color: blue; /* Diamond color */
+  background-color: blue; 
 }
 
 .gameOver {
