@@ -1,13 +1,14 @@
 .snakeBoardWrapper {
-  max-width: 55vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   gap: 50px;
   /* border:2px solid red; */
 }
 .board {
-  max-width: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(20, 2.5vw);
   grid-template-rows: repeat(10, 2.5vw);
@@ -18,11 +19,11 @@
 .cell {
   width: 2.5vw;
   height: 2.5vw;
-  background-color: #fff;
-  border: 1px solid #000;
+  background-color: #000;
+  border: 1px solid #fff;
 }
 .cell:hover {
-  background-color: green;
+  background-color: rgb(56, 255, 34);
 }
 
 .snake {
@@ -73,12 +74,13 @@
 .featuresContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .gameOver {
   color: red;
   font-size: 40px;
   text-align: center;
+  margin:0;
 }
 .stopBtn {
   background-color: red;
@@ -89,8 +91,16 @@
   color: #fff;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .gameOver {
-    margin-top: 60px;
+    margin-top: 40px;
+  }
+  .board{
+    grid-template-columns: repeat(20, 3.5vw);
+    grid-template-rows: repeat(10, 3.5vw);
+  }
+  .cell{
+    width: 4vw;
+    height: 4vw;
   }
 }
