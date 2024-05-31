@@ -1,11 +1,11 @@
 import GameBoard from "./components/gameBoard/GameBoard";
-import "./index.css"
+import "./index.css";
 function App() {
-  return(
+  return (
     <div className="gameContainer">
-    <GameBoard/>
+      <GameBoard />
     </div>
-  )
+  );
 }
 
 export default App;

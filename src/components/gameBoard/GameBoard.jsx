@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import styles from "./GameBoard.module.css";
 
@@ -25,10 +24,12 @@ const GameBoard = () => {
   const generateInitialSnakePositions = () => {
     const initialRow = Math.floor(Math.random() * rows);
     const initialCol = Math.floor(Math.random() * cols);
-    const initialDirection = ["up", "down", "left", "right"][Math.floor(Math.random() * 4)]; 
+    const initialDirection = ["up", "down", "left", "right"][
+      Math.floor(Math.random() * 4)
+    ];
     let head = new Node(initialRow, initialCol);
     let tail = head;
-  
+
     for (let i = 1; i < initialSnakeLength; i++) {
       let nextCol;
       let nextRow;
@@ -59,8 +60,8 @@ const GameBoard = () => {
     }
     return { head, tail, direction: initialDirection };
   };
-  
-//generate random position fpr diamond
+
+  //generate random position fpr diamond
   const generateRandomPosition = () => {
     const row = Math.floor(Math.random() * rows);
     const col = Math.floor(Math.random() * cols);
@@ -119,7 +120,10 @@ const GameBoard = () => {
       newHead.next = snake.head;
       const newSnake = { ...snake, head: newHead, direction: newDirection };
 
-      if (newHead.row === diamondPosition.row && newHead.col === diamondPosition.col) {
+      if (
+        newHead.row === diamondPosition.row &&
+        newHead.col === diamondPosition.col
+      ) {
         setScore((prevScore) => prevScore - 10);
         setDiamondPosition(generateRandomPosition());
       } else {
@@ -156,16 +160,15 @@ const GameBoard = () => {
   };
 
   useEffect(() => {
-    const speedMultiplier = 0.95 - (0.05 * Math.min(1, snakes.length / 10));
+    const speedMultiplier = 0.95 - 0.05 * Math.min(1, snakes.length / 10);
     if (gameRunning) {
       const interval = setInterval(() => {
         moveSnakes();
       }, baseSpeed * Math.pow(speedMultiplier, snakes.length - 1));
-  
+
       return () => clearInterval(interval);
     }
   }, [gameRunning, snakes, diamondPosition]);
-  
 
   useEffect(() => {
     const snakeCount = Math.floor(score / 10);
@@ -215,9 +218,13 @@ const GameBoard = () => {
         </div>
         <div className={styles.buttons}>
           {gameRunning ? (
-            <button onClick={handleStop} className={styles.stopBtn}>Stop</button>
+            <button onClick={handleStop} className={styles.stopBtn}>
+              Stop
+            </button>
           ) : (
-            <button onClick={handleStart} className={styles.startBtn}>Start</button>
+            <button onClick={handleStart} className={styles.startBtn}>
+              Start
+            </button>
           )}
         </div>
       </div>

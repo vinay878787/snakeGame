@@ -1,5 +1,5 @@
 .snakeBoardWrapper {
-  max-width:55vw;
+  max-width: 55vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -7,35 +7,34 @@
   /* border:2px solid red; */
 }
 .board {
-  max-width:100%;
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(20, 2.5vw); 
-  grid-template-rows: repeat(10, 2.5vw); 
-  gap: 1px; 
+  grid-template-columns: repeat(20, 2.5vw);
+  grid-template-rows: repeat(10, 2.5vw);
+  gap: 1px;
   max-height: 50vh;
 }
-
 
 .cell {
   width: 2.5vw;
   height: 2.5vw;
-  background-color: #fff; 
-  border: 1px solid #000; 
+  background-color: #fff;
+  border: 1px solid #000;
 }
-.cell:hover{
+.cell:hover {
   background-color: green;
 }
 
 .snake {
-  background-color: red; 
+  background-color: red;
 }
 
 .player {
-  background-color: green; 
+  background-color: green;
 }
 
 .diamond {
-  background-color: blue; 
+  background-color: blue;
 }
 
 .gameOver {
@@ -59,17 +58,17 @@
   font-size: 16px;
   cursor: pointer;
 }
-.scoreWrapper{
-  width:100%;
+.scoreWrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 .score {
-  width:100px;
+  width: 100px;
   text-align: center;
   font-size: 30px;
   border: 2px solid #000;
-  padding:15px;
+  padding: 15px;
 }
 .featuresContainer {
   display: flex;
@@ -81,17 +80,17 @@
   font-size: 40px;
   text-align: center;
 }
-.stopBtn{
+.stopBtn {
   background-color: red;
-  color:#fff;
+  color: #fff;
 }
-.startBtn{
+.startBtn {
   background-color: green;
-  color:#fff;
+  color: #fff;
 }
 
-@media  screen and (max-width:900px) {
-  .gameOver{
+@media screen and (max-width: 900px) {
+  .gameOver {
     margin-top: 60px;
   }
 }
